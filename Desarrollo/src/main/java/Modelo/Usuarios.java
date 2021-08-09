@@ -1,21 +1,29 @@
-package com.ejemplo1.ejemplo1;
+package Modelo;
 
-import javax.persistence.*;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
 @Entity
 @Table(name = "usuario")
-public class Usuario {
+public class Usuarios {
 
     @Id
-    @Column
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
-    @Column
     private String name;
-    @Column
     private String lastname;
-    @Column
     private int age;
+
+    public Usuarios(String name, String lastname, int age) {
+        super();
+        this.name = name;
+        this.lastname = lastname;
+        this.age = age;
+
+    }
 
     public int getId() {
         return id;
@@ -48,4 +56,5 @@ public class Usuario {
     public void setAge(int age) {
         this.age = age;
     }
+
 }

@@ -7,6 +7,7 @@ import { FormsModule } from "@angular/forms";
 import { ListarComponent } from './Usuario/listar/listar.component';
 import { AddComponent } from './Usuario/add/add.component';
 import { EditComponent } from './Usuario/edit/edit.component';
+import { ServiceService } from '../app/Service/service.service';
 
 
 @NgModule({
@@ -21,7 +22,7 @@ import { EditComponent } from './Usuario/edit/edit.component';
     HttpClientModule,
     FormsModule
   ],
-  providers: [],
+  providers: [ServiceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

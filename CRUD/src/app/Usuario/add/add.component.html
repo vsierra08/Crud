@@ -1,1 +1,25 @@
-<p>add works!</p>
+<div class="container col-md-6">
+    <div class="card">
+        <div class="card-header">
+            <h3>Crear Nuevo Usuarios</h3>
+        </div>
+        <div class="card-body">
+            <form action="">
+                <div class="for-group">
+                    <label for="">Nombres:</label>
+                    <input name="name" type="text" class="form-control">
+                </div>
+                <div class="for-group">
+                    <label for="">Apellidos:</label>
+                    <input name="lasname" type="text" class="form-control">
+                </div>
+                <div class="for-group">
+                    <label for="">Edad:</label>
+                    <input name="age" type="text" class="form-control">
+                </div>
+                <button (click)="'Guardar(usuario)'" class="btn btn-danger">Guardar</button>
+            </form>
+        </div>
+    </div>
+</div>
+<router-outlet></router-outlet>

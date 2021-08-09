@@ -10,11 +10,15 @@ import { Usuario } from 'src/app/Model/Usuario';
 })
 export class ListarComponent implements OnInit {
 
-  usuarios!:Usuario[];
-  
-  constructor(private service:ServiceService, private route:Router ) { }
+  usuarios!: Usuario[];
+
+  constructor(private service: ServiceService, private route: Router) { }
 
   ngOnInit(): void {
+    this.service.getUsuarios()
+      .subscribe(data => {
+        this.usuarios=data;
+      })
   }
 
 }
